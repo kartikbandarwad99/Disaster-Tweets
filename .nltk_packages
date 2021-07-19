@@ -1,0 +1,18 @@
+$ echo "punkt brown" > .nltk_packages
+$ ls -a
+.nltk_packages Procfile  requirements.txt  web.py
+
+$ heroku create --buildpack https://github.com/megacool/heroku-buildpack-python-nltk
+
+$ git push heroku master
+...
+-----> Python app detected
+     $ pip install -r requirements.txt
+-----> Downloading NLTK packages punkt brown
+[nltk_data] Downloading package punkt to /app/nltk_data...
+[nltk_data]   Unzipping tokenizers/punkt.zip.
+[nltk_data] Downloading package brown to
+[nltk_data]     /app/nltk_data...
+[nltk_data]   Unzipping taggers/brown.zip.
+-----> Discovering process types
+       Procfile declares types -> (none)
